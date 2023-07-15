@@ -18,7 +18,7 @@ class Public::PostsController < ApplicationController
       redirect_to post_path(@post.id)
     else
       @messages = @post.errors.messages
-      flash[:alert] = @messages[:introduction].join("") +  @messages[:images].join("")
+      flash[:alert] = @messages[:introduction].join("") + @messages[:images].join("")
       redirect_to request.referer
     end
   end
